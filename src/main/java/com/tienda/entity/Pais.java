@@ -23,7 +23,7 @@ public class Pais implements Serializable {
     @Id
     @GeneratedValue(strategy= GenerationType.IDENTITY)
     private long id; 
-    private String nombre;
+    private String pais;
 
     public long getId() {
         return id;
@@ -34,11 +34,11 @@ public class Pais implements Serializable {
     }
 
     public String getNombre() {
-        return nombre;
+        return pais;
     }
 
     public void setNombre(String nombre) {
-        this.nombre = nombre;
+        this.pais = pais;
     }
     
     
