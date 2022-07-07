@@ -33,11 +33,11 @@ public class Pais implements Serializable {
         this.id = id;
     }
 
-    public String getNombre() {
+    public String getPais() {
         return pais;
     }
 
-    public void setNombre(String nombre) {
+    public void setPais(String nombre) {
         this.pais = pais;
     }
     
