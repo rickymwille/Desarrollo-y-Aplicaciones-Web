@@ -4,47 +4,43 @@
  */
 package com.StoriesForEveryone.service;
 
+import com.StoriesForEveryone.entity.Usuario;
+import com.StoriesForEveryone.repository.UsuarioRepository;
 import java.util.List;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
 
-/**
- *
- * @author carlo
- */
+
+@Service
 public class UsuarioService implements IUsuarioService{
     
     @Autowired
     private UsuarioRepository usuarioRepository;
     
-    
-        
-        
+    @Override
+    public List<Usuario> getALLUsuario() {
+      return (List<Usuario>)usuarioRepository.findAll();
         
     }
 
     @Override
-    public List<Object> getALLUsuario() {
-       return (List<Persona>)personaRepository.findAll(); 
-        }
+    public Usuario getUsuarioById(long id) {
+        return usuarioRepository.findById(id).orElse(null);
+    }
 
     @Override
-    public Object getUsuarioById(long id) {
-       return personaRepository.findById(id).orElse(null); 
-        }
-
-    @Override
-    public void saveUsuario(Object Usuario) {
-          personaRepository.save(persona);
-        }
+    public void saveUsuario(Usuario usuario) {
+        usuarioRepository.save(usuario);
+    }
 
     @Override
     public void delete(long id) {
-     personaRepository.deleteById(id);
-        }
+    usuarioRepository.deleteById(id);
+    }
 
     @Override
     public Object findByNombre(String nombre) {
-       return personaRepository.findByNombre(nombre);
+       return usuarioRepository.findByNombre(nombre);
         }
 
 }

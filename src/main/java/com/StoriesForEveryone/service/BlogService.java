@@ -4,6 +4,8 @@
  */
 package com.StoriesForEveryone.service;
 
+import com.StoriesForEveryone.entity.Blog;
+import com.StoriesForEveryone.repository.BlogRepository;
 import java.util.List;
 import org.springframework.beans.factory.annotation.Autowired;
 
@@ -14,15 +16,12 @@ import org.springframework.beans.factory.annotation.Autowired;
  * @author carlo
  */
 public class BlogService implements IBlogService {
-         @Autowired
+    @Autowired
     private BlogRepository blogRepository;
-   
-
-
     @Override
-    public List<Object> listBlogs() {
-   
-    public List<Blogs> listBlogs() {
-        return (List<Blogs>) blogsRepository.findAll();
+    public List<Blog> listBlog() {
+        return (List<Blog>) blogRepository.findAll();
     }
+
+    
 }

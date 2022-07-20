@@ -4,6 +4,7 @@
  */
 package com.StoriesForEveryone.service;
 
+import com.StoriesForEveryone.entity.Usuario;
 import java.util.List;
 
 /**
@@ -11,7 +12,7 @@ import java.util.List;
  * @author carlo
  */
 public interface IUsuarioService {
-       public  List<Usuario> getALLUsuario();
+    public  List<Usuario> getALLUsuario();
     public Usuario getUsuarioById (long id);
     public void saveUsuario(Usuario Usuario);
     public void delete (long id);
