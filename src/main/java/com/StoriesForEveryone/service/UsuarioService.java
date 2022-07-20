@@ -39,7 +39,7 @@ public class UsuarioService implements IUsuarioService{
     }
 
     @Override
-    public Object findByNombre(String nombre) {
+    public Usuario findByNombre(String nombre) {
        return usuarioRepository.findByNombre(nombre);
         }
 

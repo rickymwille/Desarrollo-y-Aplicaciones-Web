@@ -5,7 +5,7 @@
 package com.StoriesForEveryone.controller;
 
 import com.StoriesForEveryone.entity.Blog;
-import com.StoriesForEveryonea.entity.Usuario;
+import com.StoriesForEveryone.entity.Usuario;
 import com.StoriesForEveryone.service.IBlogService;
 import com.StoriesForEveryone.service.IUsuarioService;
 import java.util.List;

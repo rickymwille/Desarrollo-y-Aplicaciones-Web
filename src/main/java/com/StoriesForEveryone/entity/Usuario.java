@@ -5,6 +5,7 @@
 package com.StoriesForEveryone.entity;
 
 import java.io.Serializable;
+import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
 import javax.persistence.Entity;
@@ -134,14 +135,14 @@ public class Usuario implements Serializable {
         if (this.roles.length() > 0) {
             return Arrays.asList(this.roles.split(","));
         }
-        return ArraysList<>();
+        return new ArrayList<>();
     }
     
     public List<String> getPermissionList() {
         if (this.permissions.length() > 0) {
             return Arrays.asList(this.permissions.split(","));
         }
-        return ArraysList<>();
+        return new ArrayList<>();
     }
         
 }
