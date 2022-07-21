@@ -67,8 +67,8 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter {
                 .hasAnyRole("USER", "VENDEDOR", "ADMIN")
                 .anyRequest().authenticated()
                 .and()
-                .formLogin()
-                //.loginPage("/login").permitAll().defaultSuccessUrl("/persona",true)
+                .formLogin()//.successHandler(appAuthenticationSuccessHandler())
+                .loginPage("/login").permitAll().defaultSuccessUrl("/persona",true)
                 ;
     }
 }
