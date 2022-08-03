@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head th:replace="plantilla/template::head">
+</head>
+<body>
+    <header th:replace="plantilla/template::header">
+    </header>
+    
+    <main class="main-container">
+        
+        <div class="indextitles">
+            <p th:text="#{contents.greetings}"></p>
+        </div>
+        <div class="indeximages">
+            <img src="images/index1.png" alt="Index Blog Image" width="660" height="436">
+        </div>
+        <div class="indextext">
+            <p>
+            <div>
+            Stories for Everyone is a blog-page we<br> 
+            created for people to tell their stories.<br>
+            </div>
+            <div style="margin-top: 30px;">
+            The idea of it is for anyone who wants to <br>
+            share a story to the rest of the web to be<br> 
+            able to do it freely. We crave for inspiring<br>
+            stories to be told by people with out of the<br>
+            box mentalities and inspire everyone else to<br>
+            do the same. Please feel free to tell whatever<br>
+            you want to relate here and tell everyone you<br>
+            know who would be interested in doing the same.
+            </p>
+            </div>
+        </div>
+        
+    </main>
+    <footer th:replace="plantilla/template::footer">
+    </footer>
+</body>
+</html>

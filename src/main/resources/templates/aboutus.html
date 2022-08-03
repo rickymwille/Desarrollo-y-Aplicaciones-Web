@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head th:replace="plantilla/template::head">
+</head>
+<body>
+    <header th:replace="plantilla/template::header">
+    </header>
+    <main class="main-container">
+        <div class="Aboutus"> 
+                <h2 class="AboutUs_Titulo" 
+                    th:text="#{pagina.aboutus}"></h2>
+                <p th:text="#{contents.aboutus}"></p> 
+        </div>  
+    </main>
+    <footer th:replace="plantilla/template::footer">
+    </footer>
+</body>
+</html>

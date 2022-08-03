@@ -1,17 +1,7 @@
 CREATE DATABASE StoriesForEveryone;
 USE StoriesForEveryone;
 
-CREATE TABLE blogs (
-  id int NOT NULL AUTO_INCREMENT,
-  TituloBlog varchar(50) NOT NULL,
-  Fecha date NOT NULL,
-  Entry varchar(500) NOT NULL,
-  id_usuario int NOT NULL,
-  PRIMARY KEY (id),
-  FOREIGN KEY (id_usuario) REFERENCES users(id)
-);
-
-CREATE TABLE users (
+CREATE TABLE usuarios (
   id int NOT NULL AUTO_INCREMENT,
   username varchar(45) NOT NULL,
   nombre varchar(45) NOT NULL,
@@ -22,4 +12,14 @@ CREATE TABLE users (
   roles VARCHAR(45) NOT NULL,
   permissions VARCHAR(45) NOT NULL,
   PRIMARY KEY (id)
+);
+
+CREATE TABLE blogs (
+  id int NOT NULL AUTO_INCREMENT,
+  TituloBlog varchar(50) NOT NULL,
+  Fecha date NOT NULL,
+  Entry varchar(500) NOT NULL,
+  id_usuario int NOT NULL,
+  PRIMARY KEY (id),
+  FOREIGN KEY (id_usuario) REFERENCES usuarios(id)
 );

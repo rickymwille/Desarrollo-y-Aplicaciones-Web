@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head th:replace="plantilla/template::head">
+</head>
+<body>
+    <header th:replace="plantilla/template::header">
+    </header>
+    <main class="main-container">
+        
+        <div class="Aboutus"> 
+               <h2 class="AboutUs_Titulo">Contact Us</h2>
+                <p class="ContactUs_P">    
+                    <p th:text="#{contents.email}"></p>  StoriesForEveryone@gmail.com <br>
+                    <p th:text="#{contents.numero}"></p> 2207-0000 
+                </p>
+        </div> 
+    </main>
+    <footer th:replace="plantilla/template::footer">
+    </footer>
+</body>
+</html>

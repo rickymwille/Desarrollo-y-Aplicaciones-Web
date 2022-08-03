@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head th:replace="plantilla/template::head">
+</head>
+<body>
+    <header th:replace="plantilla/template::header">
+    </header>
+    <main class="main-container">
+        <!-- contenedor prindicpal  -->
+        <div class="Perfil">
+            <section class="section-form">
+                <div class="contenedor-perfil">
+                    <div class="perfil">
+                        <form action="get" method="get" enctype="text/plain" name="EmailForm" class="form">
+                            <h3><i class="fas fa-user" th:text="#{pagina.profile}"></i></h3>
+                            <div class="form__section">
+                                <input type="text" name="usuario" placeholder="Nombre de usuario" class="form_output">
+                            </div>
+                            <div class="form__section">
+                                <input type="email" name="email" placeholder="e-mail" class="form_output">
+                            </div>
+                            <div class="form__section">
+                                <textarea name="aboutMe" rows="8" cols="40" placeholder="Breve descripcion sobre ti" class="form_output"></textarea>
+                            </div>
+                            <div class="form__section">
+                                <input type="submit" value="Guardar Cambios" class="form__botton">
+                            </div>
+                            <div class="form__section">
+                                <a href="rewards.html"><input value="Rewards" class="form__botton rewards__button"></a>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </section>
+            
+        </div>
+    </main>
+    <footer th:replace="plantilla/template::footer">
+    </footer>
+</body>
+</html>

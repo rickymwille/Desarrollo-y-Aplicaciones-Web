@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head th:replace="plantilla/template::head">
+</head>
+<body>
+    <header th:replace="plantilla/template::header">
+    </header>
+    <main class="main-container">
+
+        <section class="section-form">
+            <div class="contenedor-signup">
+                <div class="signup">
+                    <form action="post" method="post" enctype="text/plain" name="EmailForm" class="form">
+                        <h3><i class="fas fa-user-plus" th:text="#{pagina.registrar}"></i></h3>
+                        <div class="form__section">
+                            <input type="text" name="usuario" placeholder="Nombre de usuario" required="" class="form__input">
+                        </div>
+                        <div class="form__section">
+                            <input type="password" name="password" min="8" placeholder="Contraseña" required="" class="form__input">
+                        </div>
+                        <div class="form__section">
+                            <input type="password" name="re-password" min="8" placeholder="Reingresar Contraseña" required="" class="form__input">
+                        </div>
+                        <div class="form__section">
+                            <input type="email" name="email" min="8" placeholder="e-mail" required="" class="form__input">
+                        </div>
+                        <div class="form__section">
+                            <textarea name="aboutMe" rows="8" cols="40" placeholder="Breve descripcion sobre ti" required="" class="form__input"></textarea>
+                        </div>
+                        <div class="form__section dragAndDrop">
+                            <label>Arrastra tu Avatar aqui:</label>
+                            <input type="file" name="pic" draggable=true class="form__input">
+                        </div>
+                        <div class="form__section">
+                            <input type="submit" value="Registrar cuenta" class="form__botton">
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </section>
+
+    </main>
+    <footer th:replace="plantilla/template::footer">
+    </footer>
+</body>
+</html>
