@@ -24,7 +24,7 @@ public class UsuarioController {
     @Autowired
     private IBlogService blogService;
 
-    @GetMapping("/index")
+    @GetMapping("/users")
     public String index(Model model) {
         List<Usuario> listaUsuario = usuarioService.getALLUsuario();
         model.addAttribute("titulo", "Tabla Usuario");
@@ -39,7 +39,7 @@ public class UsuarioController {
         List<Blog> listaBlog = blogService.listBlog();
         model.addAttribute("usuario", new Usuario());
         model.addAttribute("blog", listaBlog);
-        return "profile";
+        return "signup";
 
     }
 

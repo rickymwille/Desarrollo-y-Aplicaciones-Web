@@ -10,20 +10,29 @@
         <section class="section-form">
             <div class="contenedor-signup">
                 <div class="signup">
-                    <form action="post" method="post" enctype="text/plain" name="EmailForm" class="form">
-                        <h3><i class="fas fa-user-plus" th:text="#{pagina.registrar}"></i></h3>
+                    <form class="form" th:object ="${persona}" th:action = "@{/save}" method="POST">
+                        <h3><i class="fas fa-user-plus"></i>Registrar cuenta</h3>
                         <div class="form__section">
-                            <input type="text" name="usuario" placeholder="Nombre de usuario" required="" class="form__input">
+                            <input type="text" th:field="*{username}" name="usuario" placeholder="Nombre de usuario" required="" class="form__input">
                         </div>
                         <div class="form__section">
-                            <input type="password" name="password" min="8" placeholder="Contraseña" required="" class="form__input">
+                            <input type="text" th:field="*{contrasena}" name="password" min="8" placeholder="Contraseña" required="" class="form__input">
                         </div>
                         <div class="form__section">
-                            <input type="password" name="re-password" min="8" placeholder="Reingresar Contraseña" required="" class="form__input">
+                            <input type="text" th:field="*{nombre}" name="Nombre" min="8" placeholder="Reingresar Contraseña" required="" class="form__input">
                         </div>
                         <div class="form__section">
-                            <input type="email" name="email" min="8" placeholder="e-mail" required="" class="form__input">
+                            <input type="text" th:field="*{apellido}" name="Apellido" min="8" placeholder="Reingresar Contraseña" required="" class="form__input">
                         </div>
+                        <div class="form__section">
+                            <input type="text" th:field="*{email}" name="email" min="8" placeholder="e-mail" required="" class="form__input">
+                        </div>
+                        
+                        <div class="form__section">
+                                  <label for="telefono" class="form-label">Activo</label>
+                                  <input type="text" class="form-control"  name="Activo" th:field="*{activo}" required>
+                        </div>
+                        
                         <div class="form__section">
                             <textarea name="aboutMe" rows="8" cols="40" placeholder="Breve descripcion sobre ti" required="" class="form__input"></textarea>
                         </div>
