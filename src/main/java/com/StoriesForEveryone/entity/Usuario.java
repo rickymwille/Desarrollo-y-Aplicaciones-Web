@@ -34,14 +34,14 @@ public class Usuario implements Serializable {
         private String email;
         
         private String password;
-        private String roles;
-        private String permissions;
+        private String roles ="";
+        private String permissions = "";
         private int active;
         
         @ManyToOne
         @JoinColumn (name="blog_id")
         private Blog blog;
-    private List<String> ArraysList;
+    
 
     public long getId() {
         return id;

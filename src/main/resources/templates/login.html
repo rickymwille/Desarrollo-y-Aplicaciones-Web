@@ -1,33 +1,34 @@
 <!DOCTYPE html>
 <html xmlns:th="http://www.thymeleaf.org">
-<head th:replace="plantilla/template::head">
-</head>
-<body>
-    <header th:replace="plantilla/template::header">
-    </header>
-    <main class="main-container__Login">
-        <h2 class="login-titulo"><i class="fas fa-key-skeleton" th:text="#{pagina.login}"></i></h2>
-        <section class="container-login">
-            <form class="form-login">
-                <div class="form-login__section">
-                    <input type="text" name="usuario" placeholder="Nombre de usuario" class="form-login__input">
-                </div>
-                <div class="form-login_section">
-                    <input type="password" name="password" placeholder="Contraseña" class="form-login__input">
-                </div>
-                <div class="form-login__section">
-                    <input type="submit" placeholder="Enviar" class="form-login__input">
-                </div>
-            </form>
-            <div class="form-login-img">
-                <div class="form-login-img-container">
-                    <img src="https://www.pngmart.com/files/7/E-Mail-Transparent-Background.png">
-                </div>
-            </div>
-        </section>
+    <head th:replace="plantilla/template::head">
+    </head>
+    <body>
+        <header th:replace="plantilla/template::header">
+        </header>
+        <main class="main-container__Login">
+            <h2 class="login-titulo"><i class="fas fa-key-skeleton" th:text="#{pagina.login}">Login </i></h2>
 
-    </main>
-    <footer th:replace="plantilla/template::footer">
-    </footer>
-</body>
+            <section class="container-login">
+                <form class="form-login">
+                    <div class="form-login__section">
+                        <input type="text" name="usuario" placeholder="Nombre de usuario" class="form-login__input">
+                    </div>
+                    <div class="form-login_section">
+                        <input type="password" name="password" placeholder="Contraseña" class="form-login__input">
+                    </div>
+                    <div class="form-login__section">
+                        <input type="submit" placeholder="Enviar" class="form-login__input">
+                    </div>
+                </form>
+                <div class="form-login-img">
+                    <div class="form-login-img-container">
+                        <img src="https://www.pngmart.com/files/7/E-Mail-Transparent-Background.png">
+                    </div>
+                </div>
+            </section>
+
+        </main>
+        <footer th:replace="plantilla/template::footer">
+        </footer>
+    </body>
 </html>

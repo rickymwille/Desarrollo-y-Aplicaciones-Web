@@ -8,6 +8,7 @@ import com.StoriesForEveryone.entity.Blog;
 import com.StoriesForEveryone.repository.BlogRepository;
 import java.util.List;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
 
 
 
@@ -15,6 +16,7 @@ import org.springframework.beans.factory.annotation.Autowired;
  *
  * @author carlo
  */
+@Service
 public class BlogService implements IBlogService {
     @Autowired
     private BlogRepository blogRepository;
