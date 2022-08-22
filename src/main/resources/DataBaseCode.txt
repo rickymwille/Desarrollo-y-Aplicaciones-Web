@@ -1,25 +1,62 @@
 CREATE DATABASE StoriesForEveryone;
 USE StoriesForEveryone;
 
-CREATE TABLE usuarios (
+CREATE TABLE facts (
   id int NOT NULL AUTO_INCREMENT,
-  username varchar(45) NOT NULL,
-  nombre varchar(45) NOT NULL,
-  apellido varchar(45) NOT NULL,
-  email varchar(75) NOT NULL,
-  contrasena varchar(45) NOT NULL,
-  activo int NOT NULL,
+  status int NOT NULL,
   roles VARCHAR(45) NOT NULL,
   permissions VARCHAR(45) NOT NULL,
   PRIMARY KEY (id)
 );
 
+CREATE TABLE users (
+  id int NOT NULL AUTO_INCREMENT,
+  username varchar(45) NOT NULL,
+  PRIMARY KEY (id),
+  FOREIGN KEY (id) REFERENCES facts(id)
+);
+
+CREATE TABLE names (
+  id int NOT NULL AUTO_INCREMENT,
+  fname varchar(45) NOT NULL,
+  lname varchar(45) NOT NULL,
+  PRIMARY KEY (id),
+  FOREIGN KEY (id) REFERENCES facts(id)
+);
+
+CREATE TABLE emails (
+  id int NOT NULL AUTO_INCREMENT,
+  email varchar(45) NOT NULL,
+  PRIMARY KEY (id),
+  FOREIGN KEY (id) REFERENCES facts(id)
+);
+
+CREATE TABLE passwords (
+  id int NOT NULL AUTO_INCREMENT,
+  password varchar(45) NOT NULL,
+  PRIMARY KEY (id),
+  FOREIGN KEY (id) REFERENCES facts(id)
+);
+
+CREATE TABLE awards (
+  id int NOT NULL AUTO_INCREMENT,
+  awards int NOT NULL,
+  PRIMARY KEY (id),
+  FOREIGN KEY (id) REFERENCES facts(id)
+);
+
 CREATE TABLE blogs (
   id int NOT NULL AUTO_INCREMENT,
-  TituloBlog varchar(50) NOT NULL,
-  Fecha date NOT NULL,
-  Entry varchar(500) NOT NULL,
-  id_usuario int NOT NULL,
+  title varchar(50) NOT NULL,
+  blog_date date NOT NULL,
+  id_user int NOT NULL,
   PRIMARY KEY (id),
-  FOREIGN KEY (id_usuario) REFERENCES usuarios(id)
+  FOREIGN KEY (id_user) REFERENCES facts(id)
+);
+
+CREATE TABLE blog_entry(
+	id int NOT NULL AUTO_INCREMENT,
+    entry varchar(500) NOT NULL,
+    PRIMARY KEY (id),
+	FOREIGN KEY (id) REFERENCES blogs(id)
 );
